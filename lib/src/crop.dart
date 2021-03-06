@@ -6,9 +6,9 @@ const _kCropGridColor = Color.fromRGBO(0xd0, 0xd0, 0xd0, 0.9);
 const _kCropOverlayActiveOpacity = 0.3;
 const _kCropOverlayInactiveOpacity = 0.7;
 const _kCropHandleColor = Color.fromRGBO(0xd0, 0xd0, 0xd0, 1.0);
-const _kCropHandleSize = 10.0;
-const _kCropHandleHitSize = 48.0;
-const _kCropMinFraction = 0.1;
+const _kCropHandleSize = 0.0;
+const _kCropHandleHitSize = 0.0;
+const _kCropMinFraction = 0.0;
 
 enum _CropAction { none, moving, cropping, scaling }
 enum _CropHandleSide { none, topLeft, topRight, bottomLeft, bottomRight }
@@ -638,8 +638,8 @@ class _CropPainter extends CustomPainter {
         paint);
 
     if (!boundaries.isEmpty) {
-      _drawGrid(canvas, boundaries);
-      _drawHandles(canvas, boundaries);
+      // _drawGrid(canvas, boundaries);
+      // _drawHandles(canvas, boundaries);
     }
 
     canvas.restore();
